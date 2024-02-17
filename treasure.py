@@ -19,7 +19,7 @@ class MyTreasure(unittest.TestCase):
             x = people_checked = x_element.get_attribute("valuex")
             y = calc(x)
 
-            # Ваш код, который заполняет обязательные поля
+            
             input1 = browser.find_element(By.ID, "answer")
             input1.send_keys(y)
             option1 = browser.find_element(By.ID, "robotCheckbox")
@@ -27,14 +27,13 @@ class MyTreasure(unittest.TestCase):
             option2 = browser.find_element(By.ID, "robotsRule")
             option2.click()
 
-            # time.sleep(3)
+            
 
-            # Отправляем заполненную форму
+
             button = browser.find_element(By.CSS_SELECTOR, "[type='submit']")
             button.click()
 
-            # Проверяем, что смогли зарегистрироваться
-            # ждем загрузки страницы
+           
             time.sleep(1)
 
 
